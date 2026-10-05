@@ -23,106 +23,100 @@ st.markdown(
     """
     <style>
 
-    .stApp {
-        background-color: #0b0d12;
-    }
+    /* Main page */
 
     .main .block-container {
         max-width: 1350px;
         padding: 3rem 4rem 5rem 4rem;
     }
 
-    section[data-testid="stSidebar"] {
-        background-color: #11141b;
-    }
-
-    h1 {
-        font-size: 3.2rem !important;
-        margin-bottom: 0.2rem !important;
-    }
-
-    h2 {
-        margin-top: 3rem !important;
-        margin-bottom: 0.3rem !important;
-    }
-
-    h3 {
-        margin-top: 1rem !important;
-    }
+    /* Hero */
 
     .subtitle {
-        color: #9ca3af;
+        color: var(--text-color);
+        opacity: 0.65;
         font-size: 1.05rem;
         margin-bottom: 3rem;
     }
 
+    /* Section descriptions */
+
     .section-description {
-        color: #8b93a3;
+        color: var(--text-color);
+        opacity: 0.65;
         margin-bottom: 1.5rem;
     }
 
+    /* Metric cards */
+
     .metric-box {
-        background-color: #12151d;
-        border: 1px solid #242832;
+        background-color: var(--secondary-background-color);
+        border: 1px solid rgba(128, 128, 128, 0.2);
         border-radius: 16px;
         padding: 1.4rem;
         min-height: 125px;
     }
 
     .metric-label {
-        color: #8b93a3;
+        color: var(--text-color);
+        opacity: 0.6;
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
 
     .metric-number {
-        color: white;
+        color: var(--text-color);
         font-size: 1.7rem;
         font-weight: 700;
         margin-top: 0.5rem;
     }
 
     .positive {
-        color: #34d399;
+        color: #10b981;
     }
 
     .negative {
-        color: #f87171;
+        color: #ef4444;
     }
 
+    /* Insight cards */
+
     .insight-box {
-        background-color: #12151d;
-        border: 1px solid #242832;
+        background-color: var(--secondary-background-color);
+        border: 1px solid rgba(128, 128, 128, 0.2);
         border-radius: 14px;
         padding: 1.2rem 1.4rem;
         margin-bottom: 1rem;
     }
 
     .insight-title {
-        color: white;
+        color: var(--text-color);
         font-weight: 700;
         margin-bottom: 0.4rem;
     }
 
     .insight-description {
-        color: #9ca3af;
+        color: var(--text-color);
+        opacity: 0.65;
         line-height: 1.6;
     }
 
+    /* Footer */
+
     .footer {
         text-align: center;
-        color: #646b78;
+        color: var(--text-color);
+        opacity: 0.45;
         margin-top: 5rem;
         padding-top: 2rem;
-        border-top: 1px solid #242832;
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
     }
 
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 # ============================================================
 # TRANSACTION CATEGORIZATION
@@ -532,9 +526,9 @@ if not expense_df.empty:
         )
 
         fig_pie.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="#12151d",
-            plot_bgcolor="#12151d",
+            template="plotly_white",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             margin=dict(
                 l=20,
                 r=20,
@@ -562,9 +556,9 @@ if not expense_df.empty:
         )
 
         fig_bar.update_layout(
-            template="plotly_dark",
-            paper_bgcolor="#12151d",
-            plot_bgcolor="#12151d",
+            template="plotly_white",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
             margin=dict(
                 l=20,
                 r=20,
@@ -629,9 +623,9 @@ if not monthly.empty:
     )
 
     fig_trend.update_layout(
-        template="plotly_dark",
-        paper_bgcolor="#12151d",
-        plot_bgcolor="#12151d",
+        template="plotly_white",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
         margin=dict(
             l=20,
             r=20,
